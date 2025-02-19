@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+<!-- Replace the content tag with appropriate information -->
+<meta name="description" content="DESCRIPTION META TAG">
+<meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+<meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+<meta property="og:url" content="URL OF THE WEBSITE"/>
+<!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+<meta property="og:image" content="static/image/your_banner_image.png" />
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+
+<meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+<meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+<!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+<meta name="twitter:image" content="static/images/freamwork_2.png">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Keywords for your paper to be indexed by-->
+<meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>A Pilot Study of Translating Music into Fine-grained Finger Dance Videos</title>
+<link href="[https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro](https://fonts.googleapis.com/css?family=Google+Sans%7CNoto+Sans%7CCastoro)"
+rel="stylesheet">
+
+<link rel="stylesheet" href="static/css/bulma.min.css">
+<link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+<link rel="stylesheet" href="static/css/bulma-slider.min.css">
+<link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+<link rel="stylesheet" href="static/css/index.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+<script defer src="static/js/fontawesome.all.min.js"></script>
+<script src="static/js/bulma-carousel.min.js"></script>
+<script src="static/js/bulma-slider.min.js"></script>
+<script src="static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+<div class="hero-body">
+<div class="container is-max-desktop">
+<div class="columns is-centered">
+<div class="column has-text-centered">
+<h1 class="title is-1 publication-title">A Pilot Study of Translating Music into Expressive Finger Dance Videos</h1>
+<div class="is-size-5 publication-authors">
+
+</div>
+</section>
+
+<!-- Teaser Image -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- 在此放置图片，替换静态路径为自己的图片路径 -->
+      <img src="static/images/freamwork_2.png" alt="示例图片" style="max-width: 100%; height: auto;" />
+
+      <h2 class="subtitle has-text-centered">
+          (a) represents the training phase. Our FFD network utilizes LLM and MERT to extract the rhythmic style and fundamental features of the music, as well as to capture motion features from reconstructed dance sequences in videos. Based on these features, the FFD network is trained in different motion ranges through a local finger network and a full-body motion network, where DAL serves as a loss function to guide the generation of reliable finger sequences. (b) represents the inference phase, where only wild music needs to be input, and FFD can reconstruct diverse styles of finger dance from noise.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End Teaser Image -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+<div class="container is-max-desktop">
+<div class="columns is-centered has-text-centered">
+<div class="column is-four-fifths">
+<h2 class="title is-3">Abstract</h2>
+<div class="content has-text-justified">
+<p>
+Finger dance, a form of expressive dance performed using only the hand fingers and arm gestures, has recently gained significant popularity on social media platforms. However, compared to general music-to-dance generation, synthesizing fine-grained accurate finger dance poses a greater challenge, and this domain remains an unexplored research area. Previous methods for music-driven motion generation often struggle to capture the subtle, fine-grained movements characteristic of finger dance, resulting in performances To tackle the challenge of generating expressive and detailed finger movements synchronized with music, we propose Fine-Finger Diffusion (FFD), a novel approach that maps music to fine-grained finger dance motions. FFD leverages a diffusion model to generate realistic and stable finger movements while capturing rhythmic variations. To enhance motion smoothness and coherence, we introduce a detail-aware loss (DAL) that penalizes excessive motion between consecutive frames. Importantly, we introduce the first large-scale, finger dance video dataset DanceFingers-4K, which serves as a foundational benchmark in this task for further research. Furthermore, extensive quantitative and qualitative experiments, including a user study are conducted. Our method outperforms existing approaches on multiple quantitative metrics. To the best of our knowledge, this is the first end-to-end deep learning framework for music-driven finger dance generation, holding significant implications for both exploring this specific task and advancing fine-grained motion generation research.
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Two-row, three-column layout for videos with large description (Dataset Example) -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <!-- 大标题描述 -->
+      <h1 class="title">Dataset Example</h1>
+      
+      <!-- 第一行：3 列 -->
+      <div class="columns is-centered">
+        <div class="column is-one-third">
+          <video controls style="width: 100%; height: auto;">
+            <source src="static/groundtruth/1-1.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="column is-one-third">
+          <video controls style="width: 100%; height: auto;">
+            <source src="static/groundtruth/1-2.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="column is-one-third">
+          <video controls style="width: 100%; height: auto;">
+            <source src="static/groundtruth/1-3.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+      
+      <!-- 第二行：3 列 -->
+      <div class="columns is-centered">
+        <div class="column is-one-third">
+          <video controls style="width: 100%; height: auto;">
+            <source src="static/groundtruth/1-4.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="column is-one-third">
+          <video controls style="width: 100%; height: auto;">
+            <source src="static/groundtruth/1-5.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="column is-one-third">
+          <video controls style="width: 100%; height: auto;">
+            <source src="static/groundtruth/1-6.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- Two-row, three-column layout for videos (Generated Fingerdance) -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <!-- 中间的标题 -->
+      <h1 class="title">Generated Fingerdance</h1>
+      
+      <!-- 第一行：3 列 -->
+      <div class="columns is-centered">
+        <div class="column is-one-third">
+          <video controls style="width: 100%; height: auto;">
+            <source src="static/generated/2-1.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="column is-one-third">
+          <video controls style="width: 100%; height: auto;">
+            <source src="static/generated/2-2.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="column is-one-third">
+          <video controls style="width: 100%; height: auto;">
+            <source src="static/generated/2-3.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+      
+      <!-- 第二行：3 列 -->
+      <div class="columns is-centered">
+        <div class="column is-one-third">
+          <video controls style="width: 100%; height: auto;">
+            <source src="static/generated/2-4.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="column is-one-third">
+          <video controls style="width: 100%; height: auto;">
+            <source src="static/generated/2-5.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="column is-one-third">
+          <video controls style="width: 100%; height: auto;">
+            <source src="static/generated/2-6.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</div>
+</footer>
+
+<!-- Statcounter tracking code -->
+
+<!-- You can add a tracker to track page visits by creating an account at [statcounter.com](http://statcounter.com/) -->
+
+```
+<!-- End of Statcounter Code -->
+
+```
+
+</body>
+</html>
